@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: #a87676;
+  color: #fffbda;
+  padding: 15px;
+  text-align: center;
+}
+
+main {
+  background-color: #ffd0d0;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.wrapper {
+  width: 100%;
+}
+.wrapper > .Note-Form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.Input-Catatan {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Input-Catatan label {
+  font-size: 20px;
+  display: block;
+  padding: 15px;
+}
+
+.Input-Catatan Input[type="text"],
+.Input-Catatan textarea {
+  width: 80%;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 15px;
+}
+
+.Tambah-Catatan {
+  width: 5%;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0px 2px rgba(0, 0, 0, 0, 0.5);
+  background-color: #ca8787;
+}
+
+#notes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@keyframes waiting {
+  from {
+    transform: rotate(0 deg);
+  }
+  to {
+    transform: rotate (360 deg);
+  }
+}
+
+#loading {
+  width: 50px;
+  height: 50px;
+  border: solid 5px #ccc;
+  border-top-color: #134480;
+  border-radius: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  animation: waiting 2s linear infinite;
+}
